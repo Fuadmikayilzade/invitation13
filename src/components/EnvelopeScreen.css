@@ -45,7 +45,7 @@
 }
 
 .env-hint-text {
-  animation: hint-color-swap 2.4s ease-in-out infinite;
+  animation: hint-text-color 2.4s ease-in-out infinite;
 }
 
 .env-dot {
@@ -54,10 +54,15 @@
   transform: rotate(45deg);
   display: inline-block;
   flex-shrink: 0;
-  animation: hint-color-swap 2.4s ease-in-out infinite;
+  animation: hint-dot-color 2.4s ease-in-out infinite;
 }
 
-@keyframes hint-color-swap {
-  0%, 100% { color: #ffffff; background-color: #ffffff; }
-  50% { color: #3d1f0d; background-color: #3d1f0d; }
+@keyframes hint-text-color {
+  0%, 100% { color: #ffffff; }
+  50% { color: #3d1f0d; }
+}
+
+@keyframes hint-dot-color {
+  0%, 100% { background-color: #ffffff; }
+  50% { background-color: #3d1f0d; }
 }
