@@ -26,8 +26,6 @@ export default function InviteScreen({ musicPlaying, onToggleMusic }) {
   const drawing = useRef(false)
   const lastPos = useRef(null)
   const totalPx = useRef(0)
-  const touchStart = useRef(null)
-  const scratchLocked = useRef(false)
 
   useScrollReveal()
 
@@ -85,44 +83,20 @@ export default function InviteScreen({ musicPlaying, onToggleMusic }) {
     if (t / totalPx.current > 0.58) setScratchDone(true)
   }
 
-  // For touch, we only "commit" to scratching once the gesture looks like an
-  // actual scratch (short / sideways motion) rather than a vertical scroll swipe —
-  // this lets the page keep scrolling normally when a finger passes over the card.
   const startScratch = (e) => {
+    e.preventDefault()
     drawing.current = true
     lastPos.current = null
-    if (e.touches) {
-      const t = e.touches[0]
-      touchStart.current = { x: t.clientX, y: t.clientY }
-      scratchLocked.current = false
-    } else {
-      scratchLocked.current = true
-      draw(getPos(e, canvasRef.current))
-    }
+    draw(getPos(e, canvasRef.current))
   }
 
   const scratch = (e) => {
     if (!drawing.current) return
-    const canvas = canvasRef.current
-    if (e.touches) {
-      const t = e.touches[0]
-      if (!scratchLocked.current) {
-        const dx = t.clientX - touchStart.current.x
-        const dy = t.clientY - touchStart.current.y
-        const dist = Math.hypot(dx, dy)
-        if (dist < 10) return
-        if (Math.abs(dy) > Math.abs(dx) * 0.9) {
-          drawing.current = false
-          return
-        }
-        scratchLocked.current = true
-      }
-    }
     e.preventDefault()
-    draw(getPos(e, canvas))
+    draw(getPos(e, canvasRef.current))
   }
 
-  const stopScratch = () => { drawing.current = false; lastPos.current = null; scratchLocked.current = false }
+  const stopScratch = () => { drawing.current = false; lastPos.current = null }
 
   return (
     <div className="invite light">

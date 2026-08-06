@@ -2,7 +2,7 @@ import React from 'react'
 import './VenueSection.css'
 
 const MAP_LINK = 'https://maps.app.goo.gl/8JizvWxGs5twMsQW8'
-const WAZE_LINK = 'https://waze.com/ul?q=Nazim%20Quliyev%2027%2C%20Baku&navigate=yes'
+const WAZE_LINK = 'https://waze.com/ul?ll=40.3049313%2C49.8246664&navigate=yes'
 
 export default function VenueSection({ venueImg, dark }) {
   const d = dark ? 'dark' : ''
