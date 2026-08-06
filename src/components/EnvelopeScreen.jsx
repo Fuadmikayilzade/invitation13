@@ -43,7 +43,7 @@ export default function EnvelopeScreen({ onOpen }) {
       {!playing && (
         <div className="env-hint">
           <span className="env-dot" />
-          <span>Toxunun</span>
+          <span className="env-hint-text">Toxunun</span>
           <span className="env-dot" />
         </div>
       )}
