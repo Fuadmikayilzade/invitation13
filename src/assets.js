@@ -1,0 +1,5 @@
+export const lanternDay = "/nishan-day.jpg"
+export const lanternNight = "/nishan-night.jpg"
+export const dressCode = "/dressCode.jpg"
+export const tableSetup = "/tableSetup.jpg"
+export const venue = "/venue.jpg"

@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Cinzel:wght@400;500;600&display=swap');
+
+:root {
+  --brown-deep: #3d1f0d;
+  --brown-rich: #6b3a1f;
+  --brown-warm: #8B5E3C;
+  --brown-light: #c49a6c;
+  --gold: #c9a84c;
+  --gold-light: #e8c96d;
+  --cream: #faf7f2;
+  --ivory: #f5f0e8;
+  --bg: #fdfaf5;
+  --text-dark: #2a1505;
+  --text-mid: #5c3d20;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  width: 100%;
+}
+
+#root {
+  width: 100%;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+.app-root {
+  width: 100%;
+  transition: opacity 0.8s ease;
+}
+
+.app-root.fading {
+  opacity: 0;
+  pointer-events: none;
+}
+
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 2px; }
+
+.gold-divider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 14px auto;
+  width: 70%;
+  max-width: 260px;
+}
+.gold-divider::before,
+.gold-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+.gold-divider .diamond {
+  width: 5px;
+  height: 5px;
+  background: var(--gold);
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+}

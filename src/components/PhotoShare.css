@@ -1,0 +1,199 @@
+.photo-section {
+  padding: 10px 20px 8px;
+  max-width: 560px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.photo-card {
+  border-radius: 10px;
+  padding: 28px 22px 22px;
+  text-align: center;
+  border: 1px solid rgba(201,168,76,0.25);
+  position: relative;
+  transition: background 0.5s ease;
+}
+.photo-card:not(.dark) {
+  background: linear-gradient(160deg, rgba(255,255,255,0.85) 0%, rgba(250,247,242,0.9) 100%);
+}
+.photo-card.dark {
+  background: linear-gradient(160deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.03) 100%);
+}
+
+/* ── Ornament line ── */
+.photo-ornament-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.photo-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201,168,76,0.45), transparent);
+}
+.photo-diamond {
+  font-size: 9px;
+  color: rgba(201,168,76,0.7);
+  line-height: 1;
+}
+
+/* ── Camera icon ── */
+.photo-icon-wrap {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  margin: 0 auto 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(201,168,76,0.3);
+  transition: background 0.5s ease, color 0.5s ease;
+}
+.photo-icon-wrap:not(.dark) {
+  background: rgba(201,168,76,0.1);
+  color: #6b3a1f;
+}
+.photo-icon-wrap.dark {
+  background: rgba(201,168,76,0.1);
+  color: #e8c96d;
+}
+.photo-icon {
+  width: 30px;
+  height: 30px;
+}
+
+/* ── Title ── */
+.photo-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 20px;
+  margin: 0 0 10px;
+  line-height: 1.3;
+  transition: color 0.5s ease;
+}
+.photo-title:not(.dark) { color: #3d1f0d; }
+.photo-title.dark       { color: #e8c96d; }
+
+/* ── Inner divider ── */
+.photo-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px auto 14px;
+  width: 50%;
+}
+.photo-div::before,
+.photo-div::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201,168,76,0.4), transparent);
+}
+.photo-diamond-sm {
+  width: 5px;
+  height: 5px;
+  transform: rotate(45deg);
+  flex-shrink: 0;
+  transition: background 0.5s ease;
+}
+.photo-diamond-sm:not(.dark) { background: rgba(201,168,76,0.7); }
+.photo-diamond-sm.dark       { background: rgba(201,168,76,0.55); }
+
+/* ── Description ── */
+.photo-desc {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  line-height: 1.75;
+  margin: 0 0 10px;
+  transition: color 0.5s ease;
+}
+.photo-desc:not(.dark) { color: #5c3d20; }
+.photo-desc.dark       { color: rgba(232,201,109,0.8); }
+
+.photo-desc strong {
+  font-weight: 600;
+}
+.photo-desc:not(.dark) strong { color: #3d1f0d; }
+.photo-desc.dark strong       { color: #e8c96d; }
+
+.photo-sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 14px;
+  line-height: 1.65;
+  margin: 0 0 20px;
+  transition: color 0.5s ease;
+}
+.photo-sub:not(.dark) { color: #8B5E3C; }
+.photo-sub.dark       { color: rgba(201,168,76,0.55); }
+
+/* ── Buttons ── */
+.photo-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.photo-btn-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 4px;
+  font-family: 'Cinzel', serif;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.photo-btn-main:not(.dark) {
+  background: linear-gradient(135deg, #6b3a1f, #8B5E3C);
+  color: #f5ede0;
+}
+.photo-btn-main.dark {
+  background: linear-gradient(135deg, rgba(201,168,76,0.22), rgba(201,168,76,0.14));
+  color: #e8c96d;
+  border: 1px solid rgba(201,168,76,0.4);
+}
+.photo-btn-main:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 18px rgba(61,31,13,0.2);
+}
+
+.gp-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.photo-btn-copy {
+  padding: 11px 20px;
+  border-radius: 4px;
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.photo-btn-copy:not(.dark) {
+  background: transparent;
+  border: 1px solid rgba(139,94,60,0.32);
+  color: #6b3a1f;
+}
+.photo-btn-copy.dark {
+  background: transparent;
+  border: 1px solid rgba(201,168,76,0.28);
+  color: rgba(201,168,76,0.75);
+}
+.photo-btn-copy:hover {
+  opacity: 0.8;
+}
