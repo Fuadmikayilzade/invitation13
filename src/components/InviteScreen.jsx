@@ -130,10 +130,13 @@ export default function InviteScreen({ musicPlaying, onToggleMusic }) {
 
       {/* Fixed scroll-down indicator — visible until the user starts scrolling */}
       <div className={`scroll-hint ${showScrollHint ? '' : 'hidden'}`} aria-hidden="true">
-        <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
-          <path d="M12 4v15M12 19l-6-6M12 19l6-6" stroke="currentColor" strokeWidth="1.6"
-            strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
+        <span className="scroll-hint-label">Sürüşdürün</span>
+        <div className="scroll-hint-circle">
+          <svg viewBox="0 0 24 24" width="26" height="26" fill="none">
+            <path d="M12 3v16M12 19l-7-7M12 19l7-7" stroke="currentColor" strokeWidth="2"
+              strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </div>
       </div>
 
       <div className="ornament reveal">✦ ✦ ✦</div>
