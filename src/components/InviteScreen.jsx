@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { lanternDay, lanternNight, dressCode, tableSetup, venue } from '../assets'
+import { lanternDay, lanternNight, tableSetup, venue } from '../assets'
 import VenueSection from './VenueSection'
-import PhotoShare from './PhotoShare'
 import './InviteScreen.css'
 
 function useScrollReveal() {
@@ -162,29 +161,6 @@ export default function InviteScreen({ musicPlaying, onToggleMusic }) {
 
       <div className="ornament reveal">✦ ✦ ✦</div>
 
-      {/* ── DRESS CODE ───────────────────────── */}
-      <div className="section reveal">
-        <p className="sec-label">Geyim Kodu</p>
-        <div className="card">
-          <img src={dressCode} alt="Dress Code" className="dc-img" />
-          <div className="dc-info">
-            <div className="swatches">
-              {['#3d1f0d','#6b3a1f','#c49a6c','#d4b896'].map(c => (
-                <span key={c} className="swatch" style={{ background: c }} />
-              ))}
-            </div>
-            <p className="dc-title">Autumn Brown Elegance</p>
-            <p className="dc-desc">
-              Xanımlar: Şokolad, kakao, konyak çalarlarında möhtəşəm libas<br />
-              Cənablar: Bej-qəhvəyi kostyum, ağ köynək, tünd qəhvəyi qalstuk
-            </p>
-            <p className="dc-note">✦ Ağ rəng geyim qəbul edilmir ✦</p>
-          </div>
-        </div>
-      </div>
-
-      <div className="ornament reveal">✦ ✦ ✦</div>
-
       {/* ── TABLE ────────────────────────────── */}
       <div className="section reveal">
         <p className="sec-label">Ziyafət Məclisi</p>
@@ -192,13 +168,6 @@ export default function InviteScreen({ musicPlaying, onToggleMusic }) {
           <img src={tableSetup} alt="Table" className="table-img" />
           <div className="table-caption">Autumn elegance — qızıl, mis &amp; kakao</div>
         </div>
-      </div>
-
-      <div className="ornament reveal">✦ ✦ ✦</div>
-
-      {/* ── PHOTO SHARE ──────────────────────── */}
-      <div className="reveal">
-        <PhotoShare />
       </div>
 
       <div className="ornament reveal">✦ ✦ ✦</div>

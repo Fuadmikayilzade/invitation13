@@ -228,20 +228,6 @@
 .invite.light .sec-label { color: #8B5E3C; }
 .invite.dark  .sec-label { color: rgba(201,168,76,0.65); }
 
-/* ── Card (shared) ──────────────────────────────── */
-.card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 14px;
-  border-radius: 8px;
-  padding: 16px;
-  border: 1px solid rgba(201,168,76,0.18);
-  transition: background 0.5s ease;
-}
-.invite.light .card { background: rgba(255,255,255,0.72); }
-.invite.dark  .card { background: rgba(255,255,255,0.05); }
-
 /* ── Scratch ────────────────────────────────────── */
 .scratch-wrap {
   position: relative;
@@ -295,57 +281,6 @@
   transition: opacity 0.7s ease;
 }
 .scratch-canvas.done { opacity: 0; pointer-events: none; }
-
-/* ── Dress code ─────────────────────────────────── */
-.dc-img {
-  background: transparent;
-  width: 100%;
-  max-width: 300px;
-  object-fit: contain;
-}
-.dc-info { text-align: center; width: 100%; }
-.swatches {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  margin-bottom: 10px;
-}
-.swatch {
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  border: 2px solid rgba(255,255,255,0.5);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.14);
-  display: inline-block;
-}
-.dc-title {
-  font-family: 'Cinzel', serif;
-  font-size: 12px;
-  letter-spacing: 0.13em;
-  margin-bottom: 8px;
-  transition: color 0.5s ease;
-}
-.invite.light .dc-title { color: #3d1f0d; }
-.invite.dark  .dc-title { color: #e8c96d; }
-
-.dc-desc {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 15px;
-  line-height: 1.75;
-  margin-bottom: 7px;
-  transition: color 0.5s ease;
-}
-.invite.light .dc-desc { color: #5c3d20; }
-.invite.dark  .dc-desc { color: rgba(232,201,109,0.75); }
-
-.dc-note {
-  font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-  font-size: 13px;
-  transition: color 0.5s ease;
-}
-.invite.light .dc-note { color: #8B5E3C; }
-.invite.dark  .dc-note { color: rgba(201,168,76,0.6); }
 
 /* ── Table ──────────────────────────────────────── */
 .table-wrap {
